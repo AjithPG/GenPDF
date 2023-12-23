@@ -34,7 +34,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="w-full  lg:w-1/3 flex flex-col text-center">
-          <p className="mb-4">PDF Viewer using Plugin</p>
+          <p className="mb-4"> PDF Popup View</p>
           <a className="mb-4" href="https://www.npmjs.com/package/react-pdf">
             react pdf
           </a>
@@ -43,7 +43,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="w-full  lg:w-1/3 flex flex-col text-center">
-          <p className="mb-4">PDF Popup View</p>
+          <p className="mb-4">PDF Viewer using Plugin</p>
           <Link to={"/displaypdf"}>
             <button>PDF View</button>
           </Link>
