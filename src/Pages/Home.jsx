@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col justify-center items-center mt-10">
+    <div className="w-full flex flex-col justify-center items-center my-10">
       <p className="text-2xl bold mb-10">PDF Generators</p>
       <div className="w-full  lg:w-2/4 flex flex-col lg:flex-row  flex-wrap gap-y-5 text-center">
         <div className="w-full  lg:w-1/3 flex flex-col text-center">
