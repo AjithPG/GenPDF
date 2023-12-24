@@ -8,7 +8,11 @@ const GenericPdfDownloader = ({ rootElementId, downloadFileName }) => {
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF();
       pdf.addImage(imgData, "JPEG", 0, 0);
-      pdf.output("dataurlnewwindow");
+      //pdf.output("dataurlnewwindow");
+      window.open(
+        pdf.output("bloburl", { filename: "new-file.pdf" }),
+        "_blank"
+      );
       //pdf.save(`${downloadFileName}.pdf`);
     });
   };

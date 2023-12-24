@@ -8,10 +8,43 @@ export default function Pdfexport() {
         rootElementId="testId"
       />
       <div id="testId">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
-        quasi explicabo? Voluptatibus, incidunt! Ipsam pariatur, optio
-        voluptatem quaerat distinctio architecto qui, animi, consequatur et
-        accusantium nesciunt numquam eos natus beatae.
+        <p className="mb-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
+          quasi explicabo? Voluptatibus, incidunt! Ipsam pariatur, optio
+          voluptatem quaerat distinctio architecto qui, animi, consequatur et
+          accusantium nesciunt numquam eos natus beatae.
+        </p>
+
+        <p className="mb-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
+          quasi explicabo? Voluptatibus, incidunt! Ipsam pariatur, optio
+          voluptatem quaerat distinctio architecto qui, animi, consequatur et
+          accusantium nesciunt numquam eos natus beatae.
+        </p>
+
+        <p className="mb-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
+          quasi explicabo? Voluptatibus, incidunt! Ipsam pariatur, optio
+          voluptatem quaerat distinctio architecto qui, animi, consequatur et
+          accusantium nesciunt numquam eos natus beatae.
+        </p>
+
+        <p className="mb-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
+          quasi explicabo? Voluptatibus, incidunt! Ipsam pariatur, optio
+          voluptatem quaerat distinctio architecto qui, animi, consequatur et
+          accusantium nesciunt numquam eos natus beatae.
+        </p>
+
+        <p className="mb-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
+          quasi explicabo? Voluptatibus, incidunt! Ipsam pariatur, optio
+          voluptatem quaerat distinctio architecto qui, animi, consequatur et
+          accusantium nesciunt numquam eos natus beatae.
+        </p>
+        <footer className=" bottom-0 w-full text-center text-red-600">
+          PDF Export
+        </footer>
       </div>
     </div>
   );
