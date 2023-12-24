@@ -64,7 +64,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="w-full absolute overflow-x-hidden bottom-0 text-center mb-5">
+      <div className="w-full overflow-x-hidden bottom-0 text-center mb-5 mt-10">
         <a href="https://github.com/AjithPG/GenPDF">Code Link</a>
       </div>
     </div>
