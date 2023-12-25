@@ -12,7 +12,9 @@
   "dependencies": {
     "@fullcalendar/core": "^6.1.10",
     "@fullcalendar/daygrid": "^6.1.10",
+    "@fullcalendar/interaction": "^6.1.10",
     "@fullcalendar/react": "^6.1.10",
+    "@fullcalendar/timegrid": "^6.1.10",
     "@react-pdf/renderer": "^3.1.14",
     "fullcalendar": "^6.1.10",
     "html2canvas": "^1.4.1",
