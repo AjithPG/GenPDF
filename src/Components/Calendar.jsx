@@ -2,16 +2,18 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import FullCalendar from "@fullcalendar/react";
 import interactionPlugin from "@fullcalendar/interaction";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Calendar.css";
 
 export default function Calendar() {
   const [lang, setLang] = useState("en");
   const [dir, setDir] = useState("ltr");
+  useEffect(() => {
+    lang === "ar" ? setDir("rtl") : setDir("ltr");
+  }, [lang]);
 
   const handleLang = (e) => {
     setLang(e.target.value);
-    // lang === "ar" ? setDir("rtl") : setDir("ltr");
   };
 
   return (
