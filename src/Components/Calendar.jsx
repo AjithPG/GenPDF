@@ -7,10 +7,11 @@ import "./Calendar.css";
 
 export default function Calendar() {
   const [lang, setLang] = useState("en");
+  const [dir, setDir] = useState("ltr");
 
   const handleLang = (e) => {
-    console.log(e.target.value);
     setLang(e.target.value);
+    lang === "ar" ? setDir("rtl") : setDir("ltr");
   };
 
   return (
@@ -34,9 +35,9 @@ export default function Calendar() {
           { title: "event 2", date: "2023-12-02" },
         ]}
         locale={lang}
-        direction="rtl"
+        direction={dir}
         headerToolbar={{
-          left: "next,prev,title",
+          left: "title,prev,next",
           center: "",
           right: "timeGridDay,timeGridWeek,dayGridMonth",
         }}
