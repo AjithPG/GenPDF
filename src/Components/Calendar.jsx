@@ -11,7 +11,7 @@ export default function Calendar() {
 
   const handleLang = (e) => {
     setLang(e.target.value);
-    lang === "ar" ? setDir("rtl") : setDir("ltr");
+    // lang === "ar" ? setDir("rtl") : setDir("ltr");
   };
 
   return (
