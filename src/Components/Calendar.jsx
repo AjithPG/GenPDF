@@ -39,9 +39,9 @@ export default function Calendar() {
         locale={lang}
         direction={dir}
         headerToolbar={{
-          left: "title,prev,next",
+          left: "prev,next,title",
           center: "",
-          right: "timeGridDay,timeGridWeek,dayGridMonth",
+          right: "dayGridMonth,timeGridWeek,timeGridDay",
         }}
       />
     </>
