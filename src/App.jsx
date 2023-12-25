@@ -13,9 +13,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ReactCalender />} />
+          <Route path="/" element={<Home />} />
           <Route path="/calendar-2" element={<ReactCalender2 />} />
-          <Route path="/pdf" element={<Home />} />
+          <Route path="/calendar" element={<ReactCalender />} />
           <Route path="/pdfgenerator" element={<Pdfgenerator />} />
           <Route path="/Pdfexport" element={<Pdfexport />} />
           <Route path="/PdfView" element={<PdfViewer />} />

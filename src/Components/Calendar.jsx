@@ -4,6 +4,7 @@ import FullCalendar from "@fullcalendar/react";
 import interactionPlugin from "@fullcalendar/interaction";
 import { useEffect, useState } from "react";
 import "./Calendar.css";
+import Events from "./events";
 
 export default function Calendar() {
   const [lang, setLang] = useState("en");
@@ -32,10 +33,7 @@ export default function Calendar() {
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
         initialView="dayGridMonth"
-        events={[
-          { title: "event 1", date: "2023-12-01" },
-          { title: "event 2", date: "2023-12-02" },
-        ]}
+        events={Events}
         locale={lang}
         direction={dir}
         headerToolbar={{

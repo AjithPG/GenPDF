@@ -63,6 +63,12 @@ export default function Home() {
             View PDF
           </a>
         </div>
+        <div className="w-full  lg:w-1/3 flex flex-col text-center">
+          <p className="mb-4">React Calendar</p>
+          <Link to={"/calendar"}>
+            <button>React Calendar</button>
+          </Link>
+        </div>
       </div>
       <div className="w-full overflow-x-hidden bottom-0 text-center mb-5 mt-10">
         <a href="https://github.com/AjithPG/GenPDF">Code Link</a>
