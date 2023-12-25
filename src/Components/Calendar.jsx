@@ -2,9 +2,10 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import FullCalendar from "@fullcalendar/react";
 import interactionPlugin from "@fullcalendar/interaction";
+import allLocales from "@fullcalendar/core/locales-all";
 import { useEffect, useState } from "react";
 import "./Calendar.css";
-import Events from "./events";
+import Events from "./events.json";
 
 export default function Calendar() {
   const [lang, setLang] = useState("en");
@@ -34,6 +35,7 @@ export default function Calendar() {
         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
         initialView="dayGridMonth"
         events={Events}
+        locales={allLocales}
         locale={lang}
         direction={dir}
         headerToolbar={{

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Christmas",
+    "start": "2023-12-25T10:00:00",
+    "end": "2023-12-25T16:00:00",
+    "backgroundColor": "#BFDF7CFCF",
+    "textColor": "#333"
+  },
+  {
+    "id": 2,
+    "title": "Festival",
+    "start": "2023-12-27T12:00:00",
+    "end": "2023-12-29T20:00:00",
+    "backgroundColor": "#BFDF7CFCF",
+    "textColor": "#333"
+  },
+  {
+    "id": 3,
+    "title": "Festival",
+    "start": "2023-12-27",
+    "end": "2023-12-29",
+    "backgroundColor": "#BFDF7CFCF",
+    "textColor": "#333"
+  },
+  {
+    "id": 4,
+    "title": "Festival",
+    "start": "2023-12-27",
+    "end": "2023-12-29",
+    "backgroundColor": "#F7CFCF",
+    "textColor": "black"
+  },
+  {
+    "id": 5,
+    "title": "Events",
+    "start": "2023-12-19",
+    "end": "2024-01-01",
+    "backgroundColor": "#F7CFCF",
+    "textColor": "black"
+  }
+]
