@@ -15,43 +15,75 @@ const eventList = [
     end: "2023-12-25T16:00:00",
     backgroundColor: "#BFDF7CFCF",
     textColor: "#333",
-    allDay: true,
+    url: "https://www.google.com/",
   },
   {
     id: 2,
     title: "Festival",
-    start: "2023-12-27T12:00:00",
-    end: "2023-12-29T20:00:00",
+    start: "2023-12-25T10:00:00",
+    end: "2023-12-25T16:00:00",
     backgroundColor: "#BFDF7CFCF",
     textColor: "#333",
-    allDay: true,
   },
   {
     id: 3,
     title: "Festival",
-    start: "2023-12-27",
-    end: "2023-12-29",
+    start: "2023-12-28T10:00:00",
+    end: "2023-12-29T16:00:00",
     backgroundColor: "#BFDF7CFCF",
     textColor: "#333",
-    allDay: true,
   },
   {
     id: 4,
-    title: "Festival",
-    start: "2023-12-27",
-    end: "2023-12-29",
+    title: "Meeting",
+    start: "2023-12-26T11:00:00",
+    end: "2023-12-26T11:30:00",
     backgroundColor: "#F7CFCF",
     textColor: "black",
-    allDay: true,
   },
   {
     id: 5,
-    title: "Events",
-    start: "2023-12-19",
-    end: "2024-01-01",
+    title: "Confernece",
+    start: "2023-12-27T11:00:00",
+    end: "2023-12-28T12:30:00",
     backgroundColor: "#F7CFCF",
     textColor: "black",
-    allDay: true,
+    url: "https://www.google.com/",
+  },
+  {
+    id: 6,
+    title: "Discussion",
+    start: "2023-12-20T13:00:00",
+    end: "2023-12-25T12:30:00",
+    backgroundColor: "rgb(20 83 45)",
+    textColor: "black",
+  },
+  {
+    id: 1,
+    title: "Christmas",
+    start: "2023-12-25T10:00:00",
+    end: "2023-12-25T16:00:00",
+    backgroundColor: "#BFDF7CFCF",
+    textColor: "#333",
+    url: "https://www.google.com/",
+  },
+  {
+    id: 1,
+    title: "Christmas",
+    start: "2023-12-25T10:00:00",
+    end: "2023-12-25T16:00:00",
+    backgroundColor: "#BFDF7CFCF",
+    textColor: "#333",
+    url: "https://www.google.com/",
+  },
+  {
+    id: 1,
+    title: "Christmas",
+    start: "2023-12-25T10:00:00",
+    end: "2023-12-25T16:00:00",
+    backgroundColor: "#BFDF7CFCF",
+    textColor: "#333",
+    url: "https://www.google.com/",
   },
 ];
 
@@ -109,8 +141,10 @@ export default function Calendar() {
         initialView="dayGridMonth"
         events={events}
         locales={allLocales}
+        timeZone="timeZone: 'UTC'"
         locale={lang}
         direction={dir}
+        eventLimit={3}
         headerToolbar={{
           left: "prev,next,title",
           center: "",
@@ -118,6 +152,7 @@ export default function Calendar() {
         }}
         selectable={true}
         select={handleSelectedDates}
+        displayEventTime={true}
       />
     </>
   );
