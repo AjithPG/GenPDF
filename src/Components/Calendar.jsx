@@ -13,77 +13,48 @@ const eventList = [
     title: "Christmas",
     start: "2023-12-25T10:00:00",
     end: "2023-12-25T16:00:00",
-    backgroundColor: "#BFDF7CFCF",
-    textColor: "#333",
-    url: "https://www.google.com/",
+    textColor: "rgb(39 39 42)",
+    backgroundColor: "rgb(125 211 252)",
   },
   {
     id: 2,
     title: "Festival",
     start: "2023-12-25T10:00:00",
-    end: "2023-12-25T16:00:00",
-    backgroundColor: "#BFDF7CFCF",
-    textColor: "#333",
+    end: "2023-12-26T16:00:00",
+    textColor: "rgb(39 39 42)",
+    backgroundColor: "rgb(125 211 252)",
   },
   {
     id: 3,
     title: "Festival",
     start: "2023-12-28T10:00:00",
     end: "2023-12-29T16:00:00",
-    backgroundColor: "#BFDF7CFCF",
-    textColor: "#333",
+    textColor: "rgb(39 39 42)",
+    backgroundColor: "rgb(125 211 252)",
   },
   {
     id: 4,
     title: "Meeting",
     start: "2023-12-26T11:00:00",
     end: "2023-12-26T11:30:00",
-    backgroundColor: "#F7CFCF",
-    textColor: "black",
+    textColor: "rgb(39 39 42)",
+    backgroundColor: "rgb(125 211 252)",
   },
   {
     id: 5,
     title: "Confernece",
     start: "2023-12-27T11:00:00",
     end: "2023-12-28T12:30:00",
-    backgroundColor: "#F7CFCF",
-    textColor: "black",
-    url: "https://www.google.com/",
+    textColor: "rgb(39 39 42)",
+    backgroundColor: "rgb(125 211 252)",
   },
   {
     id: 6,
     title: "Discussion",
     start: "2023-12-20T13:00:00",
     end: "2023-12-25T12:30:00",
-    backgroundColor: "rgb(20 83 45)",
-    textColor: "black",
-  },
-  {
-    id: 1,
-    title: "Christmas",
-    start: "2023-12-25T10:00:00",
-    end: "2023-12-25T16:00:00",
-    backgroundColor: "#BFDF7CFCF",
-    textColor: "#333",
-    url: "https://www.google.com/",
-  },
-  {
-    id: 1,
-    title: "Christmas",
-    start: "2023-12-25T10:00:00",
-    end: "2023-12-25T16:00:00",
-    backgroundColor: "#BFDF7CFCF",
-    textColor: "#333",
-    url: "https://www.google.com/",
-  },
-  {
-    id: 1,
-    title: "Christmas",
-    start: "2023-12-25T10:00:00",
-    end: "2023-12-25T16:00:00",
-    backgroundColor: "#BFDF7CFCF",
-    textColor: "#333",
-    url: "https://www.google.com/",
+    textColor: "rgb(39 39 42)",
+    backgroundColor: "rgb(125 211 252)",
   },
 ];
 
@@ -100,27 +71,60 @@ export default function Calendar() {
     setLang(e.target.value);
   };
 
-  const handleSelectedDates = (info) => {
-    // console.log(info);
-    alert(`Date start from ${info.startStr} to ${info.endStr}`);
-    const title = prompt("Enter your event name");
-    //console.log(title);
-    if (title) {
-      const newEvent = {
-        id: events.length + 1,
-        title,
-        start: info.startStr,
-        end: info.endStr,
-        backgroundColor: "#F7CFCF",
-        textColor: "black",
-        allDay: true,
-      };
+  // const handleSelectedDates = (info) => {
+  //   // console.log(info);
+  //   alert(`Date start from ${info.startStr} to ${info.endStr}`);
+  //   const title = prompt("Enter your event name");
+  //   //console.log(title);
+  //   if (title) {
+  //     const newEvent = {
+  //       id: events.length + 1,
+  //       title,
+  //       start: info.startStr,
+  //       end: info.endStr,
+  //       backgroundColor: "#F7CFCF",
+  //       textColor: "black",
+  //       allDay: true,
+  //     };
 
-      // console.log(events);
-      // const data = [...events, newEvent];
-      setEvents([...events, newEvent]);
-      // console.log(data);
-    }
+  //     // console.log(events);
+  //     // const data = [...events, newEvent];
+  //     setEvents([...events, newEvent]);
+  //     // console.log(data);
+  //   }
+  // };
+
+  const handleEvent = (arg) => {
+    return (
+      // <div className="collapse collapse-arrow bg-blue-200 fc-event">
+      //   <input type="radio" name="my-accordion-2" checked="checked" readOnly />
+      //   <div className="collapse-title text-sm">{arg.event.title}</div>
+      //   <div className="collapse-content">
+      //     <p>hello</p>
+      //   </div>
+      // </div>
+      <details className="collapse collapse-arrow  w-full flex flex-col relative px-3 py-2">
+        <summary className="collapse-title">{arg.event.title}</summary>
+        <div className="w-full flex justify-end gap-2 collapse-content">
+          <button>Accept</button>
+          <button>Reject</button>
+        </div>
+      </details>
+      // <div className="bg-blue-200 text-black w-full flex flex-col relative px-3 py-2">
+      //   <div className="absolute right-2 cursor-pointer">
+      //     <img src="dropdown-arrow-svgrepo-com.svg" />
+      //   </div>
+
+      //   <div className="w-full">
+      //     <p>{arg.event.title}</p>
+      //   </div>
+
+      //   <div className="w-full flex justify-end absolute w-full ">
+      //     <button>Accept</button>
+      //     <button>Reject</button>
+      //   </div>
+      // </div>
+    );
   };
 
   return (
@@ -140,19 +144,20 @@ export default function Calendar() {
         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
         initialView="dayGridMonth"
         events={events}
+        dayMaxEvents={3}
         locales={allLocales}
-        timeZone="timeZone: 'UTC'"
+        timeZone="UTC"
         locale={lang}
         direction={dir}
-        eventLimit={3}
         headerToolbar={{
           left: "prev,next,title",
           center: "",
           right: "dayGridMonth,timeGridWeek,timeGridDay",
         }}
-        selectable={true}
-        select={handleSelectedDates}
-        displayEventTime={true}
+        // selectable={true}
+        // select={handleSelectedDates}
+        eventContent={handleEvent}
+        eventClassNames="myclass"
       />
     </>
   );

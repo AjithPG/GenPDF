@@ -4,3 +4,15 @@
   align-items: center;
   gap: 5px;
 }
+
+details > summary {
+  list-style-type: none;
+}
+
+details[open] > summary {
+  list-style-type: none;
+}
+
+.myclass {
+  z-index: 100 !important;
+}
